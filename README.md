@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cajueiro Fala
 
-## Getting Started
+Um PWA (Progressive Web App) desenvolvido em Next.js para coletar sugestões e comentários da comunidade de Barra Grande (PI) sobre melhorias que podem ser feitas na região.
 
-First, run the development server:
+## 🎯 Objetivo
 
+O projeto Cajueiro Fala é uma plataforma simples e intuitiva que permite que moradores de Barra Grande compartilhem suas ideias e sugestões sobre o que pode ser melhorado na comunidade.
+
+## ✨ Funcionalidades
+
+- **Tela de Boas-vindas**: Interface limpa e minimalista para envio de sugestões
+- **Armazenamento Local**: Comentários salvos no localStorage do navegador
+- **Painel Administrativo**: Visualização de todas as sugestões enviadas
+- **Exportação CSV**: Exporte todos os comentários para análise
+- **PWA**: Funciona offline e pode ser instalado como aplicativo
+- **Design Responsivo**: Otimizado para dispositivos móveis
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+
+- Node.js 18+ instalado
+- npm ou yarn
+
+### Instalação
+
+1. Entre na pasta do projeto:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd cajueiro-fala
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instale as dependências:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Execute o servidor de desenvolvimento:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Abra [http://localhost:3000](http://localhost:3000) no navegador
 
-## Learn More
+## 📱 Instalando como PWA
 
-To learn more about Next.js, take a look at the following resources:
+1. Abra o app no navegador (Chrome, Safari, Edge)
+2. Procure pela opção "Instalar App" ou "Adicionar à Tela Inicial"
+3. Confirme a instalação
+4. O app estará disponível como aplicativo independente
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+O design segue uma estética minimalista e elegante com:
 
-## Deploy on Vercel
+- **Tipografia**: Instrument Serif para títulos, Inter para texto
+- **Cor Principal**: #8B6F3A (tom ocre/duna)
+- **Layout**: Centrado, focado em simplicidade e usabilidade
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 Estrutura
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+cajueiro-fala/
+├── app/
+│   ├── page.tsx          # Tela principal (formulário)
+│   ├── admin/
+│   │   └── page.tsx      # Painel administrativo
+│   ├── layout.tsx        # Layout base
+│   └── globals.css       # Estilos globais
+├── public/
+│   ├── manifest.json     # Manifesto PWA
+│   └── icon.svg          # Ícone do app
+└── next.config.ts        # Configuração Next.js + PWA
+```
+
+## 🔧 Tecnologias
+
+- **Next.js 15**: Framework React
+- **TypeScript**: Tipagem estática
+- **Tailwind CSS**: Estilização
+- **next-pwa**: Funcionalidades PWA
+- **localStorage**: Armazenamento local
+
+## 📊 Painel Admin
+
+Acesse `/admin` para visualizar:
+
+- Total de comentários recebidos
+- Lista completa de sugestões
+- Busca por nome ou conteúdo
+- Exportação para CSV
+- Opção de limpar todos os dados
+
+## 🌐 Deploy
+
+Para fazer deploy em produção:
+
+```bash
+npm run build
+npm start
+```
+
+Ou faça deploy na Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/seu-usuario/cajueiro-fala)
+
+## 📝 Licença
+
+Este projeto foi criado para a comunidade de Barra Grande (PI).
+
+## 🤝 Contribuindo
+
+Sugestões e melhorias são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
